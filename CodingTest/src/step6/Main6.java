@@ -9,37 +9,81 @@ import java.util.Scanner;
 */
 public class Main6 {
 	public static void main(String[] args) {
+
 		Scanner scanner = new Scanner(System.in);
-		
-		int[] alpha = new int[26]; 
-		String s = scanner.nextLine().toUpperCase();
-	
-		for(int i=0; i<s.length(); i++) {
-			alpha[s.charAt(i)-'A'] += 1 ;
-		}
-		
-		int max = alpha[0];
-		int maxLocation = 0;
-		
-		for(int i=0; i<alpha.length; i++) {
-			if(alpha[i] > max) {
-				max = alpha[i];
-				maxLocation = i;
-			}
-		}
-		
+
+		String str = scanner.nextLine();
+
 		int count = 0;
-		
-		for(int i=0; i<alpha.length; i++) {
-			if(max == alpha[i]) {
-				count += 1;
+
+		for (int i = 0; i < str.length(); i++) {
+
+			char ch = str.charAt(i);
+
+			if (ch == 'c') { 
+				if (i < str.length() - 1) {
+					if (str.charAt(i + 1) == '=') {
+						i++;
+					} else if (str.charAt(i + 1) == '-') {
+						i++;
+					}
+				}
 			}
+
+			else if (ch == 'd') {
+				if (i < str.length() - 1) {
+					if (str.charAt(i + 1) == 'z') {
+						if (i < str.length() - 2) {
+							if (str.charAt(i + 2) == '=') { 
+								i += 2;
+							}
+						}
+					}
+
+					else if (str.charAt(i + 1) == '-') { 
+						i++;
+					}
+				}
+			}
+
+			else if (ch == 'l') {
+				if (i < str.length() - 1) {
+					if (str.charAt(i + 1) == 'j') {
+						i++;
+					}
+				}
+			}
+
+			else if (ch == 'n') {
+				if (i < str.length() - 1) {
+					if (str.charAt(i + 1) == 'j') { 
+						i++;
+					}
+				}
+			}
+
+			else if (ch == 's') {
+				if (i < str.length() - 1) {
+					if (str.charAt(i + 1) == '=') {
+						i++;
+					}
+				}
+			}
+
+			else if (ch == 'z') {
+				if (i < str.length() - 1) {
+					if (str.charAt(i + 1) == '=') {
+						i++;
+					}
+				}
+			}
+
+			count++;
+
 		}
+
+		System.out.println(count);
 		
-		if(count >= 2) {
-			System.out.print("?");
-		} else System.out.print(Character.toString(maxLocation + 'A'));
-	
 		scanner.close();
 	}
 }
