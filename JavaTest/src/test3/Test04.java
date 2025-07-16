@@ -8,7 +8,7 @@ class Student {
 	
 	
 	public Student(String studentName, String major, int grade) {
-		this.studentId++;
+		Student.studentId++;
 		this.studentName = studentName;
 		this.major = major;
 		this.grade = grade;
@@ -16,7 +16,7 @@ class Student {
 	
 	public void studentInfo() {
 		System.out.println("----------");
-		System.out.println("학번 : " + this.studentId);
+		System.out.println("학번 : " + Student.studentId);
 		System.out.println("이름 : " + this.studentName);
 		System.out.println("전공 : " + this.major);
 		System.out.println("학년 : " + this.grade);
