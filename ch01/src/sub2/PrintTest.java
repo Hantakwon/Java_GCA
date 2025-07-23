@@ -19,7 +19,7 @@ public class PrintTest {
 		
 		// 개행 출력
 		System.out.println(); 				// 줄바꿈		
-		System.out.print("Welcome\n");		// \n : 개행처리 이스케이ㄴ프 특수문자	
+		System.out.print("Welcome\n");		// \n : 개행처리 이스케이프 특수문자	
 		System.out.print("Korea!");			
 	}
 }
