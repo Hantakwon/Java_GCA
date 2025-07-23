@@ -19,7 +19,7 @@ public class MethodOverloadTest {
 		System.out.println("r4 : " + r4);
 	}
 	
-	// 오버로드 메서드 정의 : 메서드 이름은 같지만 매개변수로 구본되는 메서드.
+	// 오버로드 메서드 정의 : 메서드 이름은 같지만 매개변수로 구분되는 메서드.
 	public static int add(int a) {return a + 1;}
 	public static int add(int a, int b) {return a + b;}
 	public static double add(double a, double b) {return a + b;}

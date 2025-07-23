@@ -31,7 +31,7 @@ public class MethodTypeTest {
 		return y;
 	}
 	
-	// type1 : 매개변수 O, 반환값 X
+	// type2 : 매개변수 O, 반환값 X
 	public static void type2(boolean status) {
 		if(status) {
 			System.out.println("참입니다.");
@@ -41,7 +41,7 @@ public class MethodTypeTest {
 		}
 	}
 	
-	// type1 : 매개변수 X, 반환값 O
+	// type3 : 매개변수 X, 반환값 O
 	public static boolean type3() {
 		int num1 = 1;
 		int num2 = 2;
@@ -53,7 +53,7 @@ public class MethodTypeTest {
 		}
 	}
 	
-	// type1 : 매개변수 X, 반환값 X
+	// type4 : 매개변수 X, 반환값 X
 	public static void type4() {
 		double result = type1(5);
 		System.out.println("" + result);
